@@ -73,7 +73,7 @@ class LoginGift extends PluginBase implements Listener
 
     public function sign(Player $p){
         $p->sendMessage('---=<[每日签到]>=---')
-        if(!$thi->hasSigned($p)){
+        if(!$this->hasSigned($p)){
             $this->signPlayer($p);
             $data = $this->getLog($p);
             $p->sendMessage('成功使用 '.$data['PName'].' 的身份签到！');
